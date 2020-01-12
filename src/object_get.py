@@ -18,12 +18,8 @@ s3c = session.client(aws_access_key_id=access_key,
 
 
 #Check if bucket exists and create it.
-try:
-  s3c.head_bucket(Bucket=bucket)
-  print "Bucket already exists : %s"%(bucket)
-except Exception as err:
-  print "Creating bucket %s"%(bucket)
-  s3c.create_bucket(Bucket=bucket)
+s3c.head_bucket(Bucket=bucket)
+print "Bucket exists : %s"%(bucket)
 
 #Verify if file exists
 print "Checking if %s exists."%(key)
