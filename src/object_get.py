@@ -2,7 +2,7 @@ import boto3
 session = boto3.session.Session()
 
 #Endpoint information
-endpoint_url = "http://10.45.54.248"
+endpoint_url = "http://objects007.scalcia.com"
 access_key = "jOMpFFvMMw7un0UxBXRP2EhcVjkGza8n"
 secret_key = "pzdBtAhr6Ak_o7IkfSavlxfhMSVMUUaL"
 
