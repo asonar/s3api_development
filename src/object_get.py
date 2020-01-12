@@ -16,8 +16,6 @@ s3c = session.client(aws_access_key_id=access_key,
                            endpoint_url=endpoint_url,
                            service_name="s3")
 
-#File to upload to Objects endpoint
-filename="/tmp/employee_stats.txt"
 
 #Check if bucket exists and create it.
 try:
