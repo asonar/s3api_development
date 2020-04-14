@@ -26,7 +26,7 @@ print "Enabling versioning on bucket : %s"%(bucket)
 versioning_config = {"Status":"Enabled"}
 s3c.put_bucket_versioning(Bucket=bucket, VersioningConfiguration=versioning_config)
 
-#Setting LifeCycle policy on bucket.
+#Setting WORM on bucket.
 worm_config = {
                 "ObjectLockEnabled" : "Enabled",
                 "Rule": {
@@ -40,7 +40,7 @@ worm_config = {
 print "Configuring WORM  %s on bucket : %s"%(worm_config, bucket)
 s3c.put_object_lock_configuration(Bucket=bucket, ObjectLockConfiguration=worm_config)
 
-#Get LifeCyclePolicies configured on Bucket
+#Get WORM configured on Bucket
 print "WORM policies on bucket : %s"%(bucket)
 print json.dumps(s3c.get_object_lock_configuration(Bucket=bucket), indent=4)
 
